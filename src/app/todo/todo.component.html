@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-6 mb-4 md-mb-0">
+    <div class="form-group">
+      <input #todoItem type="text" class="form-control">
+      <!-- todoitem is a element reference -->
+       <!-- it is go to in ts by 3 method -->
+        <!-- viewchild decorator -->
+    </div>
+
+    <button
+    (click) = "ontodoAdd()"
+    class="btn btn-sm btn-block bg-primary">Add Todo</button>
+  </div>
+  <div class="col-md-6">
+   <ul class="form-group">
+    <li
+    *ngFor="let todo of todoArr"
+    class="list-group-item">
+      I Love {{todo}}
+    </li>
+   </ul>
+  </div>
+</div>
